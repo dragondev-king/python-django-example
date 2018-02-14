@@ -1,0 +1,38 @@
+{% extends 'simple_page/base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <img class="card-img-top" src="{{data.avatar_url}}" alt="Card image cap" style="max-height: 180px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">{{data.name}}</h5>
+                    <p class="card-text">{{data.bio}}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Public Repos: {{data.public_repos}}</li>
+                    <li class="list-group-item">Public Gists: {{data.public_gists}}</li>
+                    <li class="list-group-item">Followers: {{data.followers}}</li>
+                    <li class="list-group-item">Following: {{data.following}}</li>
+                </ul>
+                <div class="card-body">
+                    <a href="{{data.html_url}}" class="card-link" target="_blank">View Profile</a>
+                    <a href="{{data.blog}}" class="card-link" target="_blank">Blog</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Response</h5>
+                    <p class="card-text">
+                        {{json}}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
