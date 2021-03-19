@@ -5,7 +5,7 @@ chardet==3.0.4
 colorama==0.3.9
 configparser==3.5.0
 Django==1.11.23
-djangorestframework==3.7.7
+djangorestframework==3.11.2
 enum34==1.1.6
 futures==3.2.0
 idna==2.6
